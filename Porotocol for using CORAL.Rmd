@@ -1,0 +1,37 @@
+# protocol for using CORAL locally
+
+- using https://github.com/dphansti/CORAL locally using a browser. 
+
+
+## Preparation
+- update the PATH to include the R folder by 
+-- start > search for System properties > envrionment variables > path, edit > add "C:\Program Files\R\R-4.3.1\bin\x64" or wherever your R folder is. 
+- download github: https://git-scm.com/download/win
+- install shinywidgets package in R 
+```{r}
+remotes::install_github("dreamRs/shinyWidgets")
+```
+
+
+## Steps 
+
+- go to the folder you want to download CORAL 
+- right click > open Git Bash here
+- type in
+
+```bash
+git clone https://github.com/dphansti/CORAL.git
+```
+
+- after it is downloaded, follow instructions given by the developers 
+```bash
+R < install.R --no-save
+R < global.R --no-save
+R -e "shiny::runApp('.')"
+
+```
+
+- on the bash window, you will see "Listening on http://127.0.0.1:" followed by number. Open your web browser of choice and type in e.g., "http://127.0.0.1:3845"
+- It is ready for use!
+
+
